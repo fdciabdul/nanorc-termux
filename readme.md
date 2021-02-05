@@ -11,13 +11,13 @@ There are three ways to install this repo.
 Copy the following code to download and run the installer script:
 
 ```sh
-curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+curl https://raw.githubusercontent.com/fdciabdul/nanorc-termux/master/install.sh | sh
 ```
 
 If your machine doesn't have `curl` command, use this code:
 
 ```sh
-wget https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh -O- | sh
+wget https://raw.githubusercontent.com/fdciabdul/nanorc-termux/master/install.sh -O- | sh
 ```
 
 This automatically unpacks all the `.nanorc` files to `~/.nano`.
@@ -48,12 +48,12 @@ For readability will use `$install_path` for the path of your choose (in *system
 
 For user, only run:
 
-`git clone git@github.com:scopatz/nanorc.git $install_path` or  
-`git clone https://github.com/scopatz/nanorc.git $install_path`
+`git clone git@github.com:fdciabdul/nanorc-termux.git $install_path` or  
+`git clone https://github.com/fdciabdul/nanorc-termux.git $install_path`
 
 For system wide, run:
 
-`sudo git clone https://github.com/scopatz/nanorc.git $install_path`
+`sudo git clone https://github.com/fdciabdul/nanorc-termux.git $install_path`
 
 ## Configuration
 
