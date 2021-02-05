@@ -7,14 +7,14 @@ if [ ! "$(command -v unzip)" ]; then
 fi
 
 _fetch_sources(){
-  wget -O /tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
+  wget -O $PREFIX/tmp/nanorc.zip https://github.com/scopatz/nanorc/archive/master.zip
   mkdir -p ~/.nano/
 
   cd ~/.nano/ || exit
-  unzip -o "/tmp/nanorc.zip"
+  unzip -o "$PREFIX/tmp/nanorc.zip"
   mv nanorc-master/* ./
   rm -rf nanorc-master
-  rm /tmp/nanorc.zip
+  rm $PREFIX/tmp/nanorc.zip
 }
 
 _update_nanorc(){
@@ -29,7 +29,7 @@ _update_nanorc(){
 }
 
 _update_nanorc_lite(){
-  sed -i '/include "\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
+  sed -i '/include "\$PREFIX\/usr\/share\/nano\/\*\.nanorc"/i include "~\/.nano\/*.nanorc"' "${NANORC_FILE}"
 }
 
 NANORC_FILE=~/.nanorc
